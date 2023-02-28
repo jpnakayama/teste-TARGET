@@ -5,7 +5,10 @@ fetch('dados.json')
     let arrayFaturamento = data    
     
     //Criando a função para calcular o menor faturamento
-    //A função se baseia em comparação entre os valores de faturamento diário. Se o faturamento for menor que o dia anterior e diferente de 0, seu valor é atribuído à variável menorValor
+    /*A função se baseia em comparação entre os valores de
+    faturamento diário. Se o faturamento for menor que o dia
+    anterior e diferente de 0, seu valor é atribuído à
+    variável menorValor*/
     function calculaMenorFaturamentoDiario(array) {
       let menorValor = array[0].valor
     
@@ -19,7 +22,9 @@ fetch('dados.json')
     }
 
     //Criando a função para calcular o maior faturamento
-    //A função se baseia em comparação entre os valores de faturamento diário. Se o faturamento for maior que o dia anterior, seu valor é atribuído à variável maiorValor
+    /*A função se baseia em comparação entre os valores de 
+    faturamento diário. Se o faturamento for maior que o dia 
+    anterior, seu valor é atribuído à variável maiorValor*/
     function calculaMaiorFaturamentoDiario(array) {
       let maiorValor = array[0].valor
 
@@ -33,7 +38,8 @@ fetch('dados.json')
     }
 
     function diasAcimaDaMedia(array) {
-      //Definindo a média de faturamento excluindo os dias em que o faturamento é 0
+      /*Definindo a média de faturamento excluindo os dias em 
+      que o faturamento é 0*/
       let faturamentoTotal = 0      
       for (let i = 0; i < array.length; i++) {
         faturamentoTotal += array[i].valor
@@ -48,7 +54,8 @@ fetch('dados.json')
 
       let faturamentoMedio = faturamentoTotal / diasUteis
 
-      //Calculando quantos dias o faturamento foi acima do faturamento medio calculado
+      /*Calculando quantos dias o faturamento foi acima do 
+      faturamento medio calculado*/
       let qtdDiasAcimaDaMedia = 0
       for (let i = 0; i < array.length; i++) {
         if (array[i].valor > faturamentoMedio) {
@@ -58,9 +65,5 @@ fetch('dados.json')
 
       return qtdDiasAcimaDaMedia
     }
-
-    console.log(calculaMenorFaturamentoDiario(arrayFaturamento))
-    console.log(calculaMaiorFaturamentoDiario(arrayFaturamento))
-    console.log(diasAcimaDaMedia(arrayFaturamento))
   }
 )

@@ -20,7 +20,9 @@ const faturamentoMensal = [{
   }
 ]
 
-//Definindo o faturamento mensal total e depois calculando o percentual de acordo com o estado que foi passado como parâmetro
+/*Definindo o faturamento mensal total e depois calculando 
+o percentual de acordo com o estado que foi passado como 
+parâmetro*/
 function calculoFaturamentoMensal(array, estado) {
   let faturamentoTotalMensal = 0
   for (let i = 0; i < array.length; i++) {
@@ -38,4 +40,3 @@ function calculoFaturamentoMensal(array, estado) {
     return percentualNoFaturamento
   }
 }
-
