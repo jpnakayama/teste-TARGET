@@ -11,6 +11,6 @@ function fazParteSequenciaFibonacci(n) {
     fibAnterior = fibTemp
   }
 
-  //Retornar se 
+  //Retornar se o valor informado faz parte da sequência de Fibonnaci
   return fibAtual === n
 }
