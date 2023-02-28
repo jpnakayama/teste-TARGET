@@ -59,8 +59,8 @@ fetch('dados.json')
       return qtdDiasAcimaDaMedia
     }
 
-    console.log(calculaMaiorFaturamentoDiario(arrayFaturamento))
     console.log(calculaMenorFaturamentoDiario(arrayFaturamento))
+    console.log(calculaMaiorFaturamentoDiario(arrayFaturamento))
     console.log(diasAcimaDaMedia(arrayFaturamento))
   }
 )
